@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Adam Parks" />
+
+    <!-- Open Graph Protocol -->
     <!-- TODO: Add description tag -->
     <meta name="og:title" content="Adam Parks - Home" />
     <meta name="og:type" content="website" />
     <!-- TODO: Add og:image and og:url tags -->
+
     <title>Adam Parks - Home</title>
+
+    <!-- Favicon -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -27,113 +32,109 @@
       href="/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="section-container">
-      <div class="section-content">
-        <a class="wordmark" href="index.html">Adam Parks</a>
-
-        <!-- Hamburger menu icon -->
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect y="2" width="16" height="2" fill="white" />
-          <rect y="7" width="16" height="2" fill="white" />
-          <rect y="12" width="16" height="2" fill="white" />
-        </svg>
-
+    <header>
+      <a class="wordmark" href="index.html">Adam Parks</a>
+      <button class="icon-button">
+        <img class="icon" src="images/menu.png" alt="Menu icon" />
+      </button>
+      <nav class="dropdown">
         <ul>
           <li>
             <!-- TODO: Add href for resume -->
-            <a href="">Resume</a>
+            <a class="link" href="#">Resume</a>
           </li>
           <li>
             <!-- TODO: Add href for projects -->
-            <a href="">Projects</a>
+            <a class="link" href="#">Projects</a>
           </li>
           <li>
-            <a href="mailto:adamvp0103@gmail.com">Email Me →</a>
+            <a class="link" href="mailto:adamvp0103@gmail.com">Email Me →</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
     <main>
-      <section class="section-container">
-        <div class="section-content">
-          <!-- TODO: Remove fixed width and height for profile image -->
-          <img
-            src="images/profile.jpeg"
-            alt="Adam Parks profile image"
-            width="128"
-            height="128"
-          />
-          <div>
-            <h1>Adam Parks</h1>
-            <span>Front-End Web Developer</span>
-          </div>
-          <p>
-            Thanks for visiting! My name is Adam Parks, and I’m an entry-level
-            front-end web developer. Here, you can find my contact information,
-            resume, and project portfolio. Feel free to contact me with any
-            questions or opportunities!
-          </p>
-          <a href="mailto:adamvp0103@gmail.com">Email Me →</a>
+      <section>
+        <!-- TODO: Remove fixed width and height for profile image -->
+        <img
+          class="hero-image"
+          src="images/profile.jpeg"
+          alt="Adam Parks profile image"
+          width="128"
+          height="128"
+        />
+        <div class="center-text">
+          <h1>Adam Parks</h1>
+          <span class="hero-subtitle">Front-End Web Developer</span>
         </div>
+        <p>
+          Thanks for visiting! My name is Adam Parks, and I’m an entry-level
+          front-end web developer. Here, you can find my contact information,
+          resume, and project portfolio. Feel free to contact me with any
+          questions or opportunities!
+        </p>
+        <a class="link" href="mailto:adamvp0103@gmail.com">Email Me →</a>
       </section>
-      <section class="section-container">
-        <div class="section-content">
-          <h2>About Me</h2>
-          <!-- TODO: Replace placeholder paragraph text -->
-          <p>
-            This is the about me section. For now, it’s a placeholder. When the
-            website is ready, I will replace this with meaningful content. I
-            might choose to talk about my personal life and what drew me to this
-            field.
-          </p>
-          <!-- TODO: Replace placeholder paragraph text -->
-          <p>
-            I might even have a second paragraph like this. Here, I could
-            perhaps talk about my career aspirations and values.
-          </p>
-        </div>
+      <section>
+        <h2>About Me</h2>
+        <!-- TODO: Replace placeholder paragraph text -->
+        <p>
+          This is the about me section. For now, it’s a placeholder. When the
+          website is ready, I will replace this with meaningful content. I might
+          choose to talk about my personal life and what drew me to this field.
+        </p>
+        <!-- TODO: Replace placeholder paragraph text -->
+        <p>
+          I might even have a second paragraph like this. Here, I could perhaps
+          talk about my career aspirations and values.
+        </p>
       </section>
-      <section class="section-container">
-        <div class="section-content">
-          <h2>Contact Info</h2>
-          <ul>
-            <li>
-              <a href="mailto:adamvp0103@gmail.com">
-                <div>
-                  <h3>Email</h3>
-                  <span>adamvp0103@gmail.com</span>
-                </div>
-                <span>→</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/adam-parks-6825ab2bb/">
-                <div>
-                  <h3>LinkedIn</h3>
-                  <span>Adam Parks</span>
-                </div>
-                <span>→</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/adamvp0103">
-                <div>
-                  <h3>GitHub</h3>
-                  <span>adamvp0103</span>
-                </div>
-                <span>→</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <section>
+        <h2 class="heading">Contact Info</h2>
+        <ul class="contact-list">
+          <li>
+            <a class="link contact-link" href="mailto:adamvp0103@gmail.com">
+              <div>
+                <h3>Email</h3>
+                <span>adamvp0103@gmail.com</span>
+              </div>
+              <span>→</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="link contact-link"
+              href="https://www.linkedin.com/in/adam-parks-6825ab2bb/"
+            >
+              <div>
+                <h3>LinkedIn</h3>
+                <span>Adam Parks</span>
+              </div>
+              <span>→</span>
+            </a>
+          </li>
+          <li>
+            <a class="link contact-link" href="https://github.com/adamvp0103">
+              <div>
+                <h3>GitHub</h3>
+                <span>adamvp0103</span>
+              </div>
+              <span>→</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
   </body>
