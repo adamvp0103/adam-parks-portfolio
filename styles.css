@@ -117,6 +117,36 @@ h3 {
   font-size: 1rem;
 }
 
+.education-listings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+.education-listing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+.course-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--gap-size);
+}
+
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.course-name {
+  font-weight: bold;
+}
+
+/* TODO: Reconfigure table rules if necessary */
 tr {
   display: flex;
   justify-content: space-between;
@@ -214,5 +244,37 @@ td {
     max-width: calc(
       100% / 2 - var(--gap-size) / 2
     ); /* To keep project image from overflowing */
+  }
+}
+
+/* Large screen sizes (desktop) */
+@media (min-width: 1008px) {
+  :root {
+    --gap-size: 2rem;
+  }
+
+  section {
+    padding-inline: calc(var(--gap-size) * 8);
+  }
+
+  .contact-list {
+    flex-direction: row;
+  }
+
+  .contact-list > * {
+    flex: 1;
+  }
+
+  .education-listings {
+    flex-direction: row;
+  }
+
+  .education-listing {
+    flex: 1;
+  }
+
+  .course-table {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--gap-size);
   }
 }
