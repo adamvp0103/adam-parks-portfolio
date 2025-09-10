@@ -76,7 +76,7 @@ header {
 .emphasized-link {
   background-color: var(--text-accent-color);
   font-weight: bold;
-  color: var(--accent-color);
+  color: var(--bg-primary);
 }
 
 .emphasized-link:hover {
@@ -88,6 +88,10 @@ section {
   flex-direction: column;
   gap: var(--gap-size);
   padding: calc(var(--gap-size) * 2);
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--bg-primary);
 }
 
 section:nth-of-type(even) {
@@ -327,5 +331,22 @@ td {
   .course-table {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--gap-size);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #444444;
+    --accent-color-hover: #666666;
+    --text-accent-color: #ffffff;
+    --text-accent-color-hover: #dddddd;
+    --bg-primary: #000000;
+    --bg-secondary: #222222;
+
+    color: #ffffff;
+  }
+
+  .nav-bar {
+    box-shadow: none;
   }
 }
