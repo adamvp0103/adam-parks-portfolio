@@ -8,6 +8,8 @@
 }
 
 :root {
+  --gap-size: 1rem;
+
   font-family: "DM Sans", sans-serif;
 }
 
@@ -17,7 +19,11 @@ header {
   top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: var(--gap-size) calc(var(--gap-size) * 2);
+}
+
+.wordmark {
+  font-weight: bold;
 }
 
 .icon-button {
@@ -30,13 +36,13 @@ header {
   width: 1rem;
 }
 
-.dropdown {
+.nav-bar {
   position: absolute;
   top: 100%;
   right: 0;
 }
 
-.dropdown > ul {
+.nav-bar > ul {
   list-style: none;
 }
 
@@ -48,12 +54,17 @@ header {
 section {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  gap: 1rem;
-  padding: 2rem;
+  gap: var(--gap-size);
+  padding: calc(var(--gap-size) * 2);
 }
 
-.centered {
+.mobile-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+.mobile-centered {
   align-self: center;
 }
 
@@ -63,7 +74,13 @@ section {
   border-radius: 50%;
 }
 
-.center-text {
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+.mobile-center-text {
   text-align: center;
 }
 
@@ -86,7 +103,7 @@ h2 {
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-size);
   list-style: none;
 }
 
@@ -103,7 +120,7 @@ h3 {
 tr {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: var(--gap-size);
   padding: 0.5rem 1rem;
 }
 
@@ -122,7 +139,7 @@ td {
 .wrapping-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--gap-size);
   list-style: none;
 }
 
@@ -130,8 +147,72 @@ td {
   padding: 0.5rem 1rem;
 }
 
+.upper-project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
 .project-image {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: top;
+}
+
+.project-text-and-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+/* Medium screen sizes (tablet) */
+@media (min-width: 641px) {
+  :root {
+    --gap-size: 1.5rem;
+  }
+
+  .wordmark {
+    font-size: var(--gap-size);
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .nav-bar {
+    position: static;
+  }
+
+  .nav-bar > ul {
+    display: flex;
+  }
+
+  section {
+    padding-inline: calc(var(--gap-size) * 4);
+  }
+
+  .mobile-vertical {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mobile-center-text {
+    text-align: left;
+  }
+
+  .mobile-centered {
+    align-self: flex-start;
+  }
+
+  .upper-project-card {
+    flex-direction: row;
+  }
+
+  .upper-project-card > * {
+    flex: 1;
+    max-width: calc(
+      100% / 2 - var(--gap-size) / 2
+    ); /* To keep project image from overflowing */
+  }
 }

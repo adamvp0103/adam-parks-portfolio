@@ -46,10 +46,10 @@
   <body>
     <header>
       <a class="wordmark" href="index.html">Adam Parks</a>
-      <button class="icon-button">
+      <button class="icon-button mobile-only">
         <img class="icon" src="images/menu.png" alt="Menu icon" />
       </button>
-      <nav class="dropdown">
+      <nav class="nav-bar">
         <ul>
           <li>
             <!-- TODO: Add href for resume -->
@@ -95,12 +95,14 @@
       </section>
       <section>
         <h2>Certification</h2>
-        <div>
-          <h3>Meta Front-End Developer</h3>
-          <span>Coursera</span>
+        <div class="mobile-vertical">
+          <div>
+            <h3>Meta Front-End Developer</h3>
+            <span>Coursera</span>
+          </div>
+          <!-- TODO: Add href for certificate verification -->
+          <a class="link mobile-centered" href="#">Verify →</a>
         </div>
-        <!-- TODO: Add href for certificate verification -->
-        <a class="link centered" href="#">Verify →</a>
         <table>
           <tr>
             <th>Introduction to Front-End Development</th>

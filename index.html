@@ -46,10 +46,10 @@
   <body>
     <header>
       <a class="wordmark" href="index.html">Adam Parks</a>
-      <button class="icon-button">
+      <button class="icon-button mobile-only">
         <img class="icon" src="images/menu.png" alt="Menu icon" />
       </button>
-      <nav class="dropdown">
+      <nav class="nav-bar">
         <ul>
           <li>
             <!-- TODO: Add href for resume -->
@@ -66,26 +66,28 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section class="mobile-vertical">
         <!-- TODO: Remove fixed width and height for profile image -->
         <img
-          class="hero-image centered"
+          class="hero-image mobile-centered"
           src="images/profile.jpeg"
           alt="Adam Parks profile image"
           width="128"
           height="128"
         />
-        <div class="center-text">
-          <h1>Adam Parks</h1>
-          <span class="hero-subtitle">Front-End Web Developer</span>
+        <div class="vertical">
+          <div class="mobile-center-text">
+            <h1>Adam Parks</h1>
+            <span class="hero-subtitle">Front-End Web Developer</span>
+          </div>
+          <p>
+            Thanks for visiting! My name is Adam Parks, and I’m an entry-level
+            front-end web developer. Here, you can find my contact information,
+            resume, and project portfolio. Feel free to contact me with any
+            questions or opportunities!
+          </p>
+          <a class="link mobile-centered" href="mailto:adamvp0103@gmail.com">Email Me →</a>
         </div>
-        <p>
-          Thanks for visiting! My name is Adam Parks, and I’m an entry-level
-          front-end web developer. Here, you can find my contact information,
-          resume, and project portfolio. Feel free to contact me with any
-          questions or opportunities!
-        </p>
-        <a class="link centered" href="mailto:adamvp0103@gmail.com">Email Me →</a>
       </section>
       <section>
         <h2>About Me</h2>
