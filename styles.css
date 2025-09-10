@@ -1,14 +1,18 @@
-/* ==== Layout ==== */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 :root {
   --gap-size: 1rem;
+  --accent-color: #000000;
+  --accent-color-hover: #222222;
+  --text-accent-color: #ffffff;
+  --text-accent-color-hover: #dddddd;
+  --bg-primary: #ffffff;
+  --bg-secondary: #dddddd;
 
   font-family: "DM Sans", sans-serif;
 }
@@ -20,16 +24,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--gap-size) calc(var(--gap-size) * 2);
+  background-color: var(--accent-color);
 }
 
 .wordmark {
   font-weight: bold;
+  text-decoration: none;
+  color: var(--text-accent-color);
 }
 
 .icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .icon {
@@ -40,6 +50,7 @@ header {
   position: absolute;
   top: 100%;
   right: 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .nav-bar > ul {
@@ -49,6 +60,27 @@ header {
 .link {
   display: block;
   padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  text-decoration: none;
+  color: var(--text-accent-color);
+}
+
+.link:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.external-link {
+  font-weight: bold;
+}
+
+.emphasized-link {
+  background-color: var(--text-accent-color);
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.emphasized-link:hover {
+  background-color: var(--text-accent-color-hover);
 }
 
 section {
@@ -56,6 +88,18 @@ section {
   flex-direction: column;
   gap: var(--gap-size);
   padding: calc(var(--gap-size) * 2);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--bg-secondary);
+}
+
+section:nth-of-type(odd) .wrapping-list-item {
+  background-color: var(--bg-secondary);
+}
+
+section:nth-of-type(even) .wrapping-list-item {
+  background-color: var(--bg-primary);
 }
 
 .mobile-vertical {
@@ -117,6 +161,10 @@ h3 {
   font-size: 1rem;
 }
 
+.normal-weight {
+  font-weight: normal;
+}
+
 .education-listings {
   display: flex;
   flex-direction: column;
@@ -140,6 +188,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+  background-color: var(--bg-primary);
 }
 
 .course-name {
@@ -152,6 +201,7 @@ tr {
   justify-content: space-between;
   margin-bottom: var(--gap-size);
   padding: 0.5rem 1rem;
+  background-color: var(--bg-secondary);
 }
 
 tr:last-of-type {
@@ -211,6 +261,7 @@ td {
 
   .nav-bar {
     position: static;
+    box-shadow: none;
   }
 
   .nav-bar > ul {
