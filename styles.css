@@ -111,8 +111,8 @@ section:nth-of-type(even) .wrapping-list-item {
 
 .hero-image {
   align-self: center;
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
 }
 
@@ -161,6 +161,13 @@ h3 {
 
 .subtext {
   font-weight: normal;
+}
+
+.active-link {
+  pointer-events: none;
+  background-color: var(--accent-color-hover);
+  color: var(--text-on-accent);
+  cursor: default;
 }
 
 .education-listings {
