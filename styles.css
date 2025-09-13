@@ -7,12 +7,12 @@
 
 :root {
   --gap-size: 1rem;
-  --accent-color: #000000;
-  --accent-color-hover: #222222;
-  --text-accent-color: #ffffff;
-  --text-accent-color-hover: #dddddd;
   --bg-primary: #ffffff;
   --bg-secondary: #dddddd;
+  --main-text: #000000;
+  --text-on-accent: #ffffff;
+  --accent-color: #000000;
+  --accent-color-hover: #222222;
 
   font-family: "DM Sans", sans-serif;
 }
@@ -30,10 +30,10 @@ header {
 .wordmark {
   font-weight: bold;
   text-decoration: none;
-  color: var(--text-accent-color);
+  color: var(--text-on-accent);
 }
 
-.icon-button {
+.nav-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,25 +44,28 @@ header {
 
 .icon {
   width: 1rem;
+  height: 1rem;
+  color: var(--text-on-accent);
 }
 
-.nav-bar {
+.nav {
   position: absolute;
   top: 100%;
   right: 0;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.nav-bar > ul {
+.nav > ul {
   list-style: none;
 }
 
 .link {
   display: block;
+  align-self: center;
   padding: 0.5rem 1rem;
   background-color: var(--accent-color);
   text-decoration: none;
-  color: var(--text-accent-color);
+  color: var(--text-on-accent);
 }
 
 .link:hover {
@@ -74,13 +77,13 @@ header {
 }
 
 .emphasized-link {
-  background-color: var(--text-accent-color);
+  background-color: var(--bg-primary);
   font-weight: bold;
-  color: var(--bg-primary);
+  color: var(--main-text);
 }
 
 .emphasized-link:hover {
-  background-color: var(--text-accent-color-hover);
+  background-color: var(--bg-secondary);
 }
 
 section {
@@ -106,29 +109,20 @@ section:nth-of-type(even) .wrapping-list-item {
   background-color: var(--bg-primary);
 }
 
-.mobile-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-size);
-}
-
-.mobile-centered {
-  align-self: center;
-}
-
 .hero-image {
+  align-self: center;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
 }
 
-.vertical {
+.hero-excluding-image {
   display: flex;
   flex-direction: column;
   gap: var(--gap-size);
 }
 
-.mobile-center-text {
+.hero-title-and-subtitle {
   text-align: center;
 }
 
@@ -165,7 +159,7 @@ h3 {
   font-size: 1rem;
 }
 
-.normal-weight {
+.subtext {
   font-weight: normal;
 }
 
@@ -176,6 +170,12 @@ h3 {
 }
 
 .education-listing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+.rich-text-and-link {
   display: flex;
   flex-direction: column;
   gap: var(--gap-size);
@@ -199,7 +199,6 @@ h3 {
   font-weight: bold;
 }
 
-/* TODO: Reconfigure table rules if necessary */
 tr {
   display: flex;
   justify-content: space-between;
@@ -259,16 +258,16 @@ td {
     font-size: var(--gap-size);
   }
 
-  .mobile-only {
+  .nav-button {
     display: none;
   }
 
-  .nav-bar {
+  .nav {
     position: static;
     box-shadow: none;
   }
 
-  .nav-bar > ul {
+  .nav > ul {
     display: flex;
   }
 
@@ -276,18 +275,25 @@ td {
     padding-inline: calc(var(--gap-size) * 4);
   }
 
-  .mobile-vertical {
-    display: flex;
+  .hero-section {
     flex-direction: row;
-    justify-content: space-between;
   }
 
-  .mobile-center-text {
+  .hero-image {
+    align-self: flex-start;
+  }
+
+  .hero-title-and-subtitle {
     text-align: left;
   }
 
-  .mobile-centered {
+  .link {
     align-self: flex-start;
+  }
+
+  .rich-text-and-link {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .upper-project-card {
@@ -336,17 +342,17 @@ td {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #444444;
-    --accent-color-hover: #666666;
-    --text-accent-color: #ffffff;
-    --text-accent-color-hover: #dddddd;
     --bg-primary: #000000;
     --bg-secondary: #222222;
+    --main-text: #ffffff;
+    --text-on-accent: #000000;
+    --accent-color: #ffffff;
+    --accent-color-hover: #dddddd;
 
-    color: #ffffff;
+    color: var(--main-text);
   }
 
-  .nav-bar {
-    box-shadow: none;
+  .nav {
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
   }
 }
