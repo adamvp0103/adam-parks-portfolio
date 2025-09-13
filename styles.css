@@ -48,6 +48,10 @@ header {
   color: var(--text-on-accent);
 }
 
+.hidden {
+  display: none;
+}
+
 .nav {
   position: absolute;
   top: 100%;
