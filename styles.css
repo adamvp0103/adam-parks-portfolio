@@ -14,7 +14,7 @@
   --accent-color: #000000;
   --accent-color-hover: #222222;
 
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 header {
@@ -257,6 +257,10 @@ td {
   display: flex;
   flex-direction: column;
   gap: var(--gap-size);
+}
+
+.inline-link {
+  color: inherit;
 }
 
 /* Medium screen sizes (tablet) */
