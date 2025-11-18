@@ -117,6 +117,7 @@ section:nth-of-type(even) .wrapping-list-item {
   align-self: center;
   width: 12rem;
   height: 12rem;
+  border: 2px solid var(--main-text);
   border-radius: 50%;
 }
 
