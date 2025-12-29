@@ -1,13 +1,12 @@
-const navButton = document.getElementById("nav-button");
-const menuIcon = document.getElementById("menu-icon");
-const closeIcon = document.getElementById("close-icon");
-const nav = document.getElementById("nav");
+const menuIcon = document.querySelector(".menu-icon");
+const closeIcon = document.querySelector(".close-icon");
+const nav = document.querySelector(".nav");
 const largerScreenQuery = window.matchMedia("(min-width: 641px)");
 
 function toggleNav() {
+  nav.classList.toggle("hidden");
   menuIcon.classList.toggle("hidden");
   closeIcon.classList.toggle("hidden");
-  nav.classList.toggle("hidden");
 }
 
 function handleScreenSize() {
@@ -21,7 +20,6 @@ function handleScreenSize() {
   }
 }
 
-navButton.addEventListener("click", toggleNav);
 largerScreenQuery.addEventListener("change", handleScreenSize);
 
 handleScreenSize();

@@ -5,89 +5,123 @@
   /* outline: 1px solid red; */
 }
 
-:root {
-  --gap-size: 1rem;
-  --bg-primary: #ffffff;
-  --bg-secondary: #dddddd;
-  --main-text: #000000;
-  --text-on-accent: #ffffff;
-  --accent-color: #000000;
-  --accent-color-hover: #222222;
-
-  font-family: 'DM Sans', sans-serif;
+.hidden {
+  display: none !important;
 }
 
-header {
+:root {
+  --max-content-width: 64rem;
+
+  --primary: #000000;
+  --secondary: #222222;
+  --tertiary: #444444;
+  --text-color: #ffffff;
+  --accent: hsl(255, 50%, 50%);
+
+  overflow-x: hidden;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+.header {
+  background-color: var(--secondary);
+}
+
+.header-content {
+  position: relative;
   display: flex;
-  position: sticky;
-  top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: var(--gap-size) calc(var(--gap-size) * 2);
-  background-color: var(--accent-color);
+  max-width: var(--max-content-width);
+  margin-inline: auto;
+  padding-inline: 0.5rem;
 }
 
 .wordmark {
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--text-on-accent);
+  color: var(--text-color);
 }
 
+.wordmark:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button containing menu or close icon */
 .nav-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  aspect-ratio: 1;
+  margin-block: 0.5rem;
   border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
   background-color: transparent;
   cursor: pointer;
+  transition: background-color 0.1s;
 }
 
-.icon {
-  width: 1rem;
-  height: 1rem;
-  color: var(--text-on-accent);
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.hidden {
-  display: none;
+.menu-icon {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .nav {
   position: absolute;
+  display: block;
   top: 100%;
   right: 0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 1rem;
+  background-color: var(--secondary);
+  overflow: hidden;
 }
 
 .nav > ul {
   list-style: none;
 }
 
-.link {
+.nav-link {
   display: block;
-  align-self: center;
-  padding: 0.5rem 1rem;
-  background-color: var(--accent-color);
+  padding: 1rem 2rem;
   text-decoration: none;
-  color: var(--text-on-accent);
+  color: var(--text-color);
+  transition: background-color 0.1s;
 }
 
-.link:hover {
-  background-color: var(--accent-color-hover);
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.external-link {
-  font-weight: bold;
+.active-nav-link {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emphasized-link {
-  background-color: var(--bg-primary);
-  font-weight: bold;
-  color: var(--main-text);
+.nav-link-icon {
+  margin-right: 0.5rem;
 }
 
-.emphasized-link:hover {
-  background-color: var(--bg-secondary);
+.email-link {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.email-link:hover {
+  background-color: var(--text-color);
+  color: var(--accent);
 }
 
 section {
@@ -270,8 +304,8 @@ td {
     --gap-size: 1.5rem;
   }
 
-  .wordmark {
-    font-size: var(--gap-size);
+  .header-content {
+    padding-inline: 1rem;
   }
 
   .nav-button {
@@ -280,11 +314,26 @@ td {
 
   .nav {
     position: static;
-    box-shadow: none;
+    margin-block: 1rem;
+    border-bottom-left-radius: 0;
+    background-color: transparent;
+    overflow: auto;
   }
 
   .nav > ul {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .email-link {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   section {
@@ -301,10 +350,6 @@ td {
 
   .hero-title-and-subtitle {
     text-align: left;
-  }
-
-  .link {
-    align-self: flex-start;
   }
 
   .rich-text-and-link {
@@ -353,22 +398,5 @@ td {
   .course-table {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--gap-size);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #000000;
-    --bg-secondary: #222222;
-    --main-text: #ffffff;
-    --text-on-accent: #000000;
-    --accent-color: #ffffff;
-    --accent-color-hover: #dddddd;
-
-    color: var(--main-text);
-  }
-
-  .nav {
-    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
   }
 }

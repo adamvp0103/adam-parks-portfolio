@@ -46,73 +46,51 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/f464c891b8.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <a class="wordmark" href="/index.html">Adam Parks</a>
-      <button id="nav-button" class="nav-button">
-        <!-- Menu icon -->
-        <svg
-          id="menu-icon"
-          class="icon"
-          role="img"
-          aria-labelledby="show-navigation-title"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title id="show-navigation-title">Show Navigation</title>
-          <rect y="2" width="16" height="2" fill="currentcolor" />
-          <rect y="7" width="16" height="2" fill="currentcolor" />
-          <rect y="12" width="16" height="2" fill="currentcolor" />
-        </svg>
+    <header class="header">
+      <div class="header-content">
+        <a class="wordmark" href="/index.html">Adam Parks</a>
+        <button class="nav-button" onclick="toggleNav()">
+          <!-- Menu icon -->
+          <i class="fa-solid fa-bars menu-icon"></i>
 
-        <!-- Close icon -->
-        <svg
-          id="close-icon"
-          class="icon hidden"
-          role="img"
-          aria-labelledby="hide-navigation-title"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title id="hide-navigation-title">Hide Navigation</title>
-          <rect
-            x="1.63604"
-            y="12.9497"
-            width="16"
-            height="2"
-            transform="rotate(-45 1.63604 12.9497)"
-            fill="currentcolor"
-          />
-          <rect
-            x="1.63604"
-            y="3.05025"
-            width="2"
-            height="16"
-            transform="rotate(-45 1.63604 3.05025)"
-            fill="currentcolor"
-          />
-        </svg>
-      </button>
-      <nav id="nav" class="nav hidden">
-        <ul>
-          <li>
-            <a class="link" href="/resume.html">Resume</a>
-          </li>
-          <li>
-            <a class="link" href="/projects.html">Projects</a>
-          </li>
-          <li>
-            <a
-              class="link external-link emphasized-link"
-              href="mailto:adamvp0103@gmail.com"
-              >Email Me →</a
-            >
-          </li>
-        </ul>
-      </nav>
+          <!-- Close icon -->
+          <i class="fa-solid fa-xmark close-icon hidden"></i>
+        </button>
+        <nav class="nav hidden">
+          <ul>
+            <li>
+              <a class="nav-link active-nav-link" href="/index.html"
+                ><i class="fa-solid fa-house nav-link-icon"></i>Home</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/resume.html"
+                ><i class="fa-solid fa-graduation-cap nav-link-icon"></i
+                >Resume</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/projects.html"
+                ><i class="fa-solid fa-laptop-code nav-link-icon"></i
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="email-link" href="mailto:adamvp0103@gmail.com"
+                ><i class="fa-solid fa-envelope nav-link-icon"></i>Email Me</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="hero-section">
