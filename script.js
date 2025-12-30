@@ -1,7 +1,7 @@
 const menuIcon = document.querySelector(".menu-icon");
 const closeIcon = document.querySelector(".close-icon");
 const nav = document.querySelector(".nav");
-const largerScreenQuery = window.matchMedia("(min-width: 641px)");
+const largerScreenQuery = window.matchMedia("(min-width: 687px)");
 
 function toggleNav() {
   nav.classList.toggle("hidden");
