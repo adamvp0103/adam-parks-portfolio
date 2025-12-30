@@ -247,11 +247,8 @@ body {
   display: block;
 }
 
-.education-item {
-  margin-top: 1.5rem;
-}
-
 .subheading {
+  margin-top: 1.5rem;
   font-size: 1.25rem;
 }
 
@@ -266,22 +263,22 @@ body {
   background-color: var(--secondary);
 }
 
-.course-table {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: var(--gap-size);
+.certificate-image {
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 0.25rem solid var(--secondary);
+  border-radius: 1rem;
 }
 
-.course-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: var(--bg-primary);
+.course-list {
+  list-style: none;
 }
 
-.course-name {
-  font-weight: bold;
+.course-item {
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
 }
 
 tr {
@@ -433,8 +430,17 @@ td {
     flex: 1;
   }
 
-  .course-table {
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--gap-size);
+  .certificate-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.5rem;
+  }
+
+  .certificate-image {
+    height: auto;
+  }
+
+  .certificate-info {
+    /* flex: 1; */
   }
 }
