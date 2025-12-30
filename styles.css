@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid rgba(255, 0, 0, 0.25);
+  /* outline: 1px solid rgba(255, 0, 0, 0.25); */
 }
 
 .hidden {
@@ -27,6 +27,8 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   background-color: var(--secondary);
 }
 
@@ -281,6 +283,21 @@ body {
   background-color: var(--secondary);
 }
 
+.wrapping-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.wrapping-list-item {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+}
+
 tr {
   display: flex;
   justify-content: space-between;
@@ -299,17 +316,6 @@ th {
 
 td {
   text-align: right;
-}
-
-.wrapping-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap-size);
-  list-style: none;
-}
-
-.wrapping-list-item {
-  padding: 0.5rem 1rem;
 }
 
 .upper-project-card {
@@ -366,6 +372,18 @@ td {
   .email-link {
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+  }
+
+  .hero-image {
+    width: 9rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
   }
 
   .upper-project-card {
