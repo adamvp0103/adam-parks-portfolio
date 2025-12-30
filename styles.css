@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px solid red; */
+  /* outline: 1px solid rgba(255, 0, 0, 0.25); */
 }
 
 .hidden {
@@ -196,25 +196,39 @@ body {
   text-decoration-color: var(--text-color);
 }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-size);
+.contact-info {
   list-style: none;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-link-container {
+  margin-bottom: 1.5rem;
+}
+
+.contact-link-container:last-of-type {
+  margin-bottom: 0;
 }
 
 .contact-link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.1s, color 0.1s;
 }
 
-h3 {
-  font-size: 1rem;
+.contact-link:hover {
+  background-color: var(--text-color);
+  color: var(--accent);
 }
 
-.subtext {
-  font-weight: normal;
+.contact-icon {
+  margin-right: 1rem;
+  font-size: 2rem;
 }
 
 .active-link {
@@ -395,12 +409,14 @@ td {
     font-size: 2rem;
   }
 
-  .contact-list {
-    flex-direction: row;
+  .contact-info {
+    display: flex;
+    gap: 1.5rem;
   }
 
-  .contact-list > * {
+  .contact-link-container {
     flex: 1;
+    margin-bottom: 0;
   }
 
   .education-listings {
