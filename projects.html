@@ -9,7 +9,10 @@
     <meta name="og:title" content="Adam Parks - Projects" />
     <meta name="og:type" content="website" />
     <meta name="og:image" content="images/profile.jpeg" />
-    <meta name="og:url" content="https://adam-parks-portfolio.netlify.app/projects" />
+    <meta
+      name="og:url"
+      content="https://adam-parks-portfolio.netlify.app/projects"
+    />
 
     <title>Adam Parks - Projects</title>
 
@@ -69,14 +72,12 @@
             </li>
             <li>
               <a class="nav-link" href="/resume.html"
-                ><i class="fa-solid fa-graduation-cap inline-icon"></i
-                >Resume</a
+                ><i class="fa-solid fa-graduation-cap inline-icon"></i>Resume</a
               >
             </li>
             <li>
               <a class="nav-link active-nav-link" href="/projects.html"
-                ><i class="fa-solid fa-laptop-code inline-icon"></i
-                >Projects</a
+                ><i class="fa-solid fa-laptop-code inline-icon"></i>Projects</a
               >
             </li>
             <li>
@@ -88,116 +89,153 @@
         </nav>
       </div>
     </header>
-    <main>
-      <section>
-        <div class="upper-project-card">
-          <img class="project-image" src="images/project-screenshots/portfolio-screenshot.png" alt="Screenshot of portfolio" />
-          <div class="project-text-and-buttons">
-            <h2>This Portfolio</h2>
-            <p>
-              Designed and developed a responsive personal portfolio website using vanilla HTML, CSS, and JavaScript. The site serves as a central hub for showcasing projects, professional information, and contact details, with a focus on clean structure, semantic markup, and accessible, maintainable front-end code.
-            </p>
-            <div class="wrapping-list">
-              <a
-                class="link external-link"
-                href="https://github.com/adamvp0103/adam-parks-portfolio"
-                target="_blank"
-                >Repo →</a
-              >
+    <main class="main">
+      <div class="title-container">
+        <h1 class="title">Projects</h1>
+      </div>
+      <section class="section">
+        <div class="section-content">
+          <div class="project-container">
+            <div>
+              <img
+                class="project-image"
+                src="images/project-screenshots/portfolio-screenshot.png"
+                alt="Screenshot of portfolio website"
+              />
+              <div class="centered-link-container">
+                <a
+                  class="centered-link"
+                  href="https://github.com/adamvp0103/adam-parks-portfolio"
+                  target="_blank"
+                  ><i class="fa-solid fa-file-code inline-icon"></i>Repo</a
+                >
+              </div>
+            </div>
+            <div>
+              <h2 class="project-title">This Portfolio</h2>
+              <p class="paragraph">
+                Designed and developed a responsive personal portfolio website
+                using vanilla HTML, CSS, and JavaScript. The site serves as a
+                central hub for showcasing projects, professional information,
+                and contact details, with a focus on clean structure, semantic
+                markup, and accessible, maintainable front-end code.
+              </p>
+              <ul class="wrapping-list">
+                <li class="wrapping-list-item">Vanilla Architecture</li>
+                <li class="wrapping-list-item">Open Graph Protocol</li>
+                <li class="wrapping-list-item">JS DOM Utilization</li>
+                <li class="wrapping-list-item">
+                  Expandable Navigation (Mobile)
+                </li>
+                <li class="wrapping-list-item">Email Links</li>
+                <li class="wrapping-list-item">Wrapping Flex Layouts</li>
+                <li class="wrapping-list-item">Media Queries</li>
+              </ul>
             </div>
           </div>
         </div>
-        <ul class="wrapping-list">
-          <li class="wrapping-list-item">Vanilla Architecture</li>
-          <li class="wrapping-list-item">Open Graph Protocol</li>
-          <li class="wrapping-list-item">JS DOM Utilization</li>
-          <li class="wrapping-list-item">Expandable Navigation (Mobile)</li>
-          <li class="wrapping-list-item">Email Links</li>
-          <li class="wrapping-list-item">Wrapping Flex Layouts</li>
-          <li class="wrapping-list-item">Media Queries</li>
-          <li class="wrapping-list-item">Dark Theme</li>
       </section>
-      <section>
-        <div class="upper-project-card">
-          <img
-            class="project-image"
-            src="images/project-screenshots/candy-cavern-screenshot.png"
-            alt="Screenshot of Candy Cavern project"
-          />
-          <div class="project-text-and-buttons">
-            <h2>Candy Cavern</h2>
-            <p>
-              Built a responsive e-commerce-style React application featuring dynamic product rendering, global shopping basket state, and a multi-step checkout flow. Implemented business logic such as quantity limits per product, real-time basket indicators, order summaries with calculated totals, and validated billing and shipping forms. Utilized React hooks, Context API for shared state, and React Router for client-side navigation.
-            </p>
-            <div class="wrapping-list">
-              <a
-                class="link external-link"
-                href="https://candy-cavern.netlify.app"
-                target="_blank"
-                >Demo →</a
-              >
-              <a
-                class="link external-link"
-                href="https://github.com/adamvp0103/candy-cavern"
-                target="_blank"
-                >Repo →</a
-              >
+      <section class="section">
+        <div class="section-content">
+          <div class="project-container">
+            <div>
+              <img
+                class="project-image"
+                src="images/project-screenshots/candy-cavern-screenshot.png"
+                alt="Screenshot of Candy Cavern project"
+              />
+              <div class="centered-link-container">
+                <a
+                  class="centered-link"
+                  href="https://candy-cavern.netlify.app"
+                  target="_blank"
+                  ><i class="fa-solid fa-play inline-icon"></i>Demo</a
+                >
+                <a
+                  class="centered-link"
+                  href="https://github.com/adamvp0103/candy-cavern"
+                  target="_blank"
+                  ><i class="fa-solid fa-file-code inline-icon"></i>Repo</a
+                >
+              </div>
+            </div>
+            <div>
+              <h2 class="project-title">Candy Cavern</h2>
+              <p class="paragraph">
+                Built a responsive e-commerce-style React application featuring
+                dynamic product rendering, global shopping basket state, and a
+                multi-step checkout flow. Implemented business logic such as
+                quantity limits per product, real-time basket indicators, order
+                summaries with calculated totals, and validated billing and
+                shipping forms. Utilized React hooks, Context API for shared
+                state, and React Router for client-side navigation.
+              </p>
+              <ul class="wrapping-list">
+                <li class="wrapping-list-item">Flex Layouts</li>
+                <li class="wrapping-list-item">Grid Layouts</li>
+                <li class="wrapping-list-item">Dynamic Lists</li>
+                <li class="wrapping-list-item">Card Components</li>
+                <li class="wrapping-list-item">React Context</li>
+                <li class="wrapping-list-item">React Router Navigation</li>
+                <li class="wrapping-list-item">Controlled Forms</li>
+                <li class="wrapping-list-item">Client-Side Validation</li>
+                <li class="wrapping-list-item">Modal Dialogs</li>
+                <li class="wrapping-list-item">Responsive Layouts</li>
+              </ul>
             </div>
           </div>
         </div>
-        <ul class="wrapping-list">
-          <li class="wrapping-list-item">Flex Layouts</li>
-          <li class="wrapping-list-item">Grid Layouts</li>
-          <li class="wrapping-list-item">Dynamic Lists</li>
-          <li class="wrapping-list-item">Card Components</li>
-          <li class="wrapping-list-item">React Context</li>
-          <li class="wrapping-list-item">React Router Navigation</li>
-          <li class="wrapping-list-item">Controlled Forms</li>
-          <li class="wrapping-list-item">Client-Side Validation</li>
-          <li class="wrapping-list-item">Modal Dialogs</li>
-          <li class="wrapping-list-item">Responsive Layouts</li>
-        </ul>
       </section>
-      <section>
-        <div class="upper-project-card">
-          <img
-            class="project-image"
-            src="images/project-screenshots/bitbabble-screenshot.png"
-            alt="Screenshot of BitBabble project"
-          />
-          <div class="project-text-and-buttons">
-            <h2>BitBabble</h2>
-            <p>
-              Developed a responsive, API-driven blog application using React and a third-party REST API. Implemented features including post and user detail pages with dynamic routing, client-side post creation, likes and follows, search and filtering, and profile management. Managed complex interactions between user and post data using React Context, and translated external data into a cohesive, user-focused interface.
-            </p>
-            <div class="wrapping-list">
-              <a
-                class="link external-link"
-                href="https://bitbabble.netlify.app"
-                target="_blank"
-                >Demo →</a
-              >
-              <a
-                class="link external-link"
-                href="https://github.com/adamvp0103/bitbabble"
-                target="_blank"
-                >Repo →</a
-              >
+      <section class="section">
+        <div class="section-content">
+          <div class="project-container">
+            <div>
+              <img
+                class="project-image"
+                src="images/project-screenshots/bitbabble-screenshot.png"
+                alt="Screenshot of BitBabble project"
+              />
+              <div class="centered-link-container">
+                <a
+                  class="centered-link"
+                  href="https://bitbabble.netlify.app"
+                  target="_blank"
+                  ><i class="fa-solid fa-play inline-icon"></i>Demo</a
+                >
+                <a
+                  class="centered-link"
+                  href="https://github.com/adamvp0103/bitbabble"
+                  target="_blank"
+                  ><i class="fa-solid fa-file-code inline-icon"></i>Repo</a
+                >
+              </div>
+            </div>
+            <div>
+              <h2 class="project-title">BitBabble</h2>
+              <p class="paragraph">
+                Developed a responsive, API-driven blog application using React
+                and a third-party REST API. Implemented features including post
+                and user detail pages with dynamic routing, client-side post
+                creation, likes and follows, search and filtering, and profile
+                management. Managed complex interactions between user and post
+                data using React Context, and translated external data into a
+                cohesive, user-focused interface.
+              </p>
+              <ul class="wrapping-list">
+                <li class="wrapping-list-item">API Data Fetching</li>
+                <li class="wrapping-list-item">Data Filtering</li>
+                <li class="wrapping-list-item">Liking & Disliking</li>
+                <li class="wrapping-list-item">Extendable Lists</li>
+                <li class="wrapping-list-item">Event Propagation Adjustment</li>
+                <li class="wrapping-list-item">URL Parameters</li>
+                <li class="wrapping-list-item">Multiple Context Interaction</li>
+                <li class="wrapping-list-item">Searching</li>
+                <li class="wrapping-list-item">Profile Editing</li>
+                <li class="wrapping-list-item">Posting</li>
+              </ul>
             </div>
           </div>
         </div>
-        <ul class="wrapping-list">
-          <li class="wrapping-list-item">API Data Fetching</li>
-          <li class="wrapping-list-item">Data Filtering</li>
-          <li class="wrapping-list-item">Liking & Disliking</li>
-          <li class="wrapping-list-item">Extendable Lists</li>
-          <li class="wrapping-list-item">Event Propagation Adjustment</li>
-          <li class="wrapping-list-item">URL Parameters</li>
-          <li class="wrapping-list-item">Multiple Context Interaction</li>
-          <li class="wrapping-list-item">Searching</li>
-          <li class="wrapping-list-item">Profile Editing</li>
-          <li class="wrapping-list-item">Posting</li>
-        </ul>
       </section>
     </main>
 

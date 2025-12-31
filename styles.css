@@ -129,6 +129,10 @@ body {
   color: var(--accent);
 }
 
+.main {
+  margin-bottom: 3rem;
+}
+
 .section {
   padding-inline: 1rem;
 }
@@ -166,6 +170,7 @@ body {
 .centered-link-container {
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
@@ -201,7 +206,6 @@ body {
 .contact-info {
   list-style: none;
   margin-top: 1.5rem;
-  margin-bottom: 3rem;
 }
 
 .contact-link-container {
@@ -259,7 +263,7 @@ body {
 }
 
 .education-stat {
-  margin-block: 1.5rem;
+  margin-top: 1.5rem;
   border-radius: 1rem;
   padding: 1rem 2rem;
   background-color: var(--secondary);
@@ -289,7 +293,6 @@ body {
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 1.5rem;
-  margin-bottom: 3rem;
 }
 
 .wrapping-list-item {
@@ -298,36 +301,19 @@ body {
   background-color: var(--secondary);
 }
 
-tr {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--gap-size);
-  padding: 0.5rem 1rem;
-  background-color: var(--bg-secondary);
-}
-
-tr:last-of-type {
-  margin-bottom: 0;
-}
-
-th {
-  text-align: left;
-}
-
-td {
-  text-align: right;
-}
-
-.upper-project-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-size);
-}
-
 .project-image {
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: top;
+  margin-top: 3rem;
+  border: 0.25rem solid var(--secondary);
+  border-radius: 1rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .project-text-and-buttons {
@@ -454,11 +440,13 @@ td {
     column-gap: 1.5rem;
   }
 
-  .certificate-image {
-    height: auto;
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.5rem;
   }
 
-  .certificate-info {
-    /* flex: 1; */
+  .project-title {
+    margin-top: 3rem;
   }
 }
