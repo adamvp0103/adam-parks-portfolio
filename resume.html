@@ -56,7 +56,7 @@
     <header class="header">
       <div class="header-content">
         <a class="wordmark" href="/index.html">Adam Parks</a>
-        <button class="nav-button" onclick="toggleNav()">
+        <button class="nav-button" onclick="toggleNav()" tabindex="0">
           <!-- Menu icon -->
           <i class="fa-solid fa-bars menu-icon"></i>
 
@@ -66,7 +66,7 @@
         <nav class="nav">
           <ul>
             <li>
-              <a class="nav-link" href="/index.html"
+              <a class="nav-link" href="/index.html" tabindex="0"
                 ><i class="fa-solid fa-house inline-icon"></i>Home</a
               >
             </li>
@@ -76,12 +76,15 @@
               >
             </li>
             <li>
-              <a class="nav-link" href="/projects.html"
+              <a class="nav-link" href="/projects.html" tabindex="0"
                 ><i class="fa-solid fa-laptop-code inline-icon"></i>Projects</a
               >
             </li>
             <li>
-              <a class="email-link" href="mailto:adamvp0103@gmail.com"
+              <a
+                class="email-link"
+                href="mailto:adamvp0103@gmail.com"
+                tabindex="0"
                 ><i class="fa-solid fa-envelope inline-icon"></i>Email Me</a
               >
             </li>
@@ -98,8 +101,9 @@
           <h2 class="heading">Projects</h2>
           <p class="paragraph">
             My work can be found on the
-            <a class="inline-link" href="./projects.html">Projects page</a>.
-            This page covers education, certification, honors, and skills.
+            <a class="inline-link" href="./projects.html" tabindex="0"
+              >Projects page</a
+            >. This page covers education, certification, honors, and skills.
           </p>
         </div>
       </section>
@@ -114,12 +118,12 @@
               <span>Towson University</span>
               <table class="education-stats">
                 <tr class="education-stat">
-                  <th>GPA</th>
-                  <td>3.74</td>
+                  <th class="education-stat-label">GPA</th>
+                  <td class="education-stat-value">3.74</td>
                 </tr>
                 <tr class="education-stat">
-                  <th>Graduation Year</th>
-                  <td>2024</td>
+                  <th class="education-stat-label">Graduation Year</th>
+                  <td class="education-stat-value">2024</td>
                 </tr>
               </table>
             </li>
@@ -128,8 +132,8 @@
               <span>Fallston High School</span>
               <table class="education-stats">
                 <tr class="education-stat">
-                  <th>Graduation Year</th>
-                  <td>2020</td>
+                  <th class="education-stat-label">Graduation Year</th>
+                  <td class="education-stat-value">2020</td>
                 </tr>
               </table>
             </li>
@@ -151,6 +155,7 @@
                   class="centered-link"
                   href="https://www.coursera.org/account/accomplishments/specialization/certificate/DLB8X8RZ4HW6/"
                   target="_blank"
+                  tabindex="0"
                   ><i class="fa-solid fa-certificate inline-icon"></i>Verify</a
                 >
               </div>

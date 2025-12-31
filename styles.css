@@ -67,7 +67,8 @@ body {
   transition: background-color 0.1s;
 }
 
-.nav-button:hover {
+.nav-button:hover,
+.nav-button:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -103,8 +104,10 @@ body {
   transition: background-color 0.1s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
 }
 
 .active-nav-link {
@@ -124,9 +127,11 @@ body {
   transition: background-color 0.1s, color 0.1s;
 }
 
-.email-link:hover {
+.email-link:hover,
+.email-link:focus {
   background-color: var(--text-color);
   color: var(--accent);
+  outline: none;
 }
 
 .main {
@@ -183,7 +188,8 @@ body {
   transition: background-color 0.1s, color 0.1s;
 }
 
-.centered-link:hover {
+.centered-link:hover,
+.centered-link:focus {
   background-color: var(--text-color);
   color: var(--accent);
 }
@@ -199,7 +205,8 @@ body {
   transition: text-decoration-color 0.1s;
 }
 
-.inline-link:hover {
+.inline-link:hover,
+.inline-link:focus {
   text-decoration-color: var(--text-color);
 }
 
@@ -227,7 +234,8 @@ body {
   transition: background-color 0.1s, color 0.1s;
 }
 
-.contact-link:hover {
+.contact-link:hover,
+.contact-link:focus {
   background-color: var(--text-color);
   color: var(--accent);
 }
@@ -260,13 +268,25 @@ body {
 
 .education-stats {
   width: 100%;
+  border-spacing: 0 1.5rem;
 }
 
 .education-stat {
   margin-top: 1.5rem;
-  border-radius: 1rem;
   padding: 1rem 2rem;
   background-color: var(--secondary);
+}
+
+.education-stat-label {
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.education-stat-value {
+  border-radius: 0 1rem 1rem 0;
+  padding: 1rem 2rem;
+  text-align: right;
 }
 
 .certificate-image {
